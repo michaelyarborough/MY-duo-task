@@ -33,7 +33,7 @@ spec:
     spec:
        containers:
        - name: flask-app
-         image: michaelyarborough/flask-duo
+         image: michaelyarborough/flask-duo:v${BUILD_NUMBER}
          imagePullPolicy: Always
          ports: 
          - containerPort: 5500
