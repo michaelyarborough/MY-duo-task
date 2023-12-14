@@ -10,6 +10,7 @@ pipeline {
             steps {sh '''
 
                 docker build -t michaelyarborough/flask-duo:latest -t michaelyarborough/flask-duo:v${BUILD_NUMBER} .
+                docker build -t michaelyarborough/flask-nginx:latest -t michaelyarborough/flask-nginx:v${BUILD_NUMBER} ./nginx
                 '''
             }
 
@@ -20,6 +21,8 @@ pipeline {
                 sh '''
                 docker push michaelyarborough/flask-duo:latest 
                 docker push michaelyarborough/flask-duo:v${BUILD_NUMBER}
+                docker push michaelyarborough/flask-nginx:latest 
+                docker push michaelyarborough/flask-nginx:v${BUILD_NUMBER}
                 '''
             }
 
