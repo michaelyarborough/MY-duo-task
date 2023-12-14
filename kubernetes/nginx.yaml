@@ -40,7 +40,7 @@ spec:
          name: nginx-config
       containers:
       - name: nginx
-        image: flask-nginx:latest
+        image: michaelyarborough/flask-nginx:latest
         imagePullPolicy: Always
         ports: 
         - containerPort: 80
