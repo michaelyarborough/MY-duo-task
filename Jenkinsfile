@@ -31,8 +31,8 @@ pipeline {
 
             steps { sh '''
                     kubectl apply -f ./kubernetes
-                    kubectl rollout restart deployment/flask-deployment
-                    kubectl rollout restart deployment/nginx-deployment                   
+                    kubectl rollout restart deployment/flask-deployment:v${BUILD_NUMBER}
+                    kubectl rollout restart deployment/nginx-deployment:v${BUILD_NUMBER}                  
                 '''
             }
 
